@@ -18,8 +18,10 @@ jobs:
           EXE=$(ls instaladores/Chongqing_POS_Setup_*.exe | sort -V | tail -1)
           VER=$(basename "$EXE" .exe | sed 's/Chongqing_POS_Setup_//')
           NOTAS="instaladores/notas-$VER.md"; [ -f "$NOTAS" ] || NOTAS=/dev/null
+          # copia con nombre fijo para el enlace corto de descarga
+          cp "$EXE" Chongqing_POS_Setup.exe
           if gh release view "v$VER" >/dev/null 2>&1; then
-            gh release upload "v$VER" "$EXE" --clobber
+            gh release upload "v$VER" "$EXE" Chongqing_POS_Setup.exe --clobber
           else
-            gh release create "v$VER" "$EXE" --title "Chongqing POS $VER" --notes-file "$NOTAS" --latest
+            gh release create "v$VER" "$EXE" Chongqing_POS_Setup.exe --title "Chongqing POS $VER" --notes-file "$NOTAS" --latest
           fi

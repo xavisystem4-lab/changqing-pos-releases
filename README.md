@@ -4,6 +4,8 @@ Instaladores de **Chongqing POS** (SoftGala FOOD) para Windows.
 
 El botón **⬆ Actualizar versión** del sistema revisa este repositorio, descarga el instalador más reciente y lo instala solo.
 
+Descarga directa de la última versión: https://github.com/xavisystem4-lab/changqing-pos-releases/releases/latest/download/Chongqing_POS_Setup.exe
+
 Para instalar a mano: abre [Releases](../../releases/latest), descarga `Chongqing_POS_Setup_X.Y.Z.exe` y ejecútalo.
 
 Desarrollado por SoftGala.
